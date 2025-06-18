@@ -23,7 +23,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($contacts as $contact)
+                    @forelse($contacts as $contact)
                         <tr>
                             <td>{{ $contact->id }}</td>
                             <td><a href="{{ route('contacts.show', $contact) }}" class="text-decoration-none text-dark fw-semibold">{{ $contact->name }}</a></td>
@@ -38,7 +38,11 @@
                                 </form>
                             </td>
                         </tr>
-                    @endforeach
+                    @empty
+                        <tr>
+                            <td colspan="5" class="text-center text-muted">No contacts found.</td>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>
