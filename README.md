@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# Contact Management - Laravel 12
+# Contact Management - Laravel 10
 
 Uma aplicação web moderna para gerenciamento de contatos, desenvolvida em Laravel 12.
 
@@ -56,7 +56,7 @@ Uma aplicação web moderna para gerenciamento de contatos, desenvolvida em Lara
   ```
 
 ## Tecnologias
-- Laravel 12
+- Laravel 10
 - PHP 8.1+
 - Bootstrap 5 (CDN)
 
