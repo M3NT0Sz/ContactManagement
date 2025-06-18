@@ -8,8 +8,8 @@
             <?php echo csrf_field(); ?>
             <?php echo method_field('PUT'); ?>
             <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" value="<?php echo e(old('name', $contact->name)); ?>">
+                <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="name" name="name" value="<?php echo e(old('name', $contact->name)); ?>" required minlength="6">
                 <?php $__errorArgs = ['name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -20,8 +20,8 @@ endif;
 unset($__errorArgs, $__bag); ?>
             </div>
             <div class="mb-3">
-                <label for="contact" class="form-label">Contact</label>
-                <input type="text" class="form-control" id="contact" name="contact" value="<?php echo e(old('contact', $contact->contact)); ?>">
+                <label for="contact" class="form-label">Contact <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="contact" name="contact" value="<?php echo e(old('contact', $contact->contact)); ?>" required pattern="\d{9}">
                 <?php $__errorArgs = ['contact'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -32,8 +32,8 @@ endif;
 unset($__errorArgs, $__bag); ?>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" value="<?php echo e(old('email', $contact->email)); ?>">
+                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" value="<?php echo e(old('email', $contact->email)); ?>" required>
                 <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -52,4 +52,4 @@ unset($__errorArgs, $__bag); ?>
 </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\mathe\Herd\html\html\resources\views/contacts/edit.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\mathe\Herd\html\html\resources\views/contacts/edit.blade.php ENDPATH**/ ?>
