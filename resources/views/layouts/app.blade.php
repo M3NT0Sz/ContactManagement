@@ -12,9 +12,16 @@
         }
         .navbar {
             background: #2563eb !important;
+            box-shadow: 0 2px 8px rgba(37,99,235,0.10);
         }
         .navbar .navbar-brand, .navbar .btn-link, .navbar .btn, .navbar a {
             color: #fff !important;
+        }
+        .navbar .btn-link, .navbar .btn {
+            transition: background 0.2s;
+        }
+        .navbar .btn-link:hover, .navbar .btn:hover {
+            background: rgba(255,255,255,0.1);
         }
         .card {
             border-radius: 18px;
@@ -39,6 +46,9 @@
         }
         .table th, .table td {
             vertical-align: middle;
+        }
+        .table-primary {
+            background: #e0e7ff !important;
         }
     </style>
 </head>
