@@ -56,8 +56,9 @@
     <nav class="navbar navbar-expand-lg mb-4">
         <div class="container">
             <a class="navbar-brand fw-bold" href="{{ route('contacts.index') }}">Contacts</a>
-            <div class="d-flex">
+            <div class="d-flex align-items-center gap-2">
                 @auth
+                    <span class="text-white me-2 small">{{ auth()->user()->name }}</span>
                     <form action="{{ route('logout') }}" method="POST" style="display:inline;">
                         @csrf
                         <button type="submit" class="btn btn-link">Logout</button>
